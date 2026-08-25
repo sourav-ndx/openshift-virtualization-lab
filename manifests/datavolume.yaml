@@ -1,0 +1,13 @@
+apiVersion: cdi.kubevirt.io/v1beta1
+kind: DataVolume
+metadata:
+  name: fedora-vm-disk
+spec:
+  source:
+    pvc:
+      namespace: openshift-virtualization-os-images
+      name: fedora
+  storage:
+    resources:
+      requests:
+        storage: 35Gi
