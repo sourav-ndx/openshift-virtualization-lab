@@ -61,7 +61,7 @@ When the VM starts, a VMI object gets created automatically. This is the running
 
 ## Layer 8 — virt-launcher Pod
 
-This is the most important thing to understand. Every running VM has exactly one virt-launcher pod on a worker node. Inside that pod, QEMU runs the actual VM using the KVM kernel module. So the VM guest OS, your Fedora Linux in this case, is running inside QEMU, inside a pod, on a worker node.
+This is the most important thing to understand. Every running VM has exactly one virt-launcher pod on a worker node. Inside that pod, QEMU runs the actual VM using the KVM kernel module. So the VM guest OS, our Fedora Linux in this case, is running inside QEMU, inside a pod, on a worker node.
 
 From OpenShift's perspective, the VM is just a pod. The scheduler treats it like any other pod. It gets an IP from OVN-Kubernetes just like a regular pod.
 
